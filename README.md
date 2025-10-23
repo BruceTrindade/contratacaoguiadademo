@@ -1,73 +1,129 @@
-# React + TypeScript + Vite
+# Contratação Guiada Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação React para demonstração de um acelerador de pontos de cartão de crédito, desenvolvida para webview bancária.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** com TypeScript
+- **Vite** para build e desenvolvimento
+- **Tailwind CSS** para estilização
+- **Framer Motion** para animações
+- **Lottie React** para animações JSON
+- **Vitest** para testes unitários
+- **React Testing Library** para testes de componentes
 
-## React Compiler
+## 📦 Instalação
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Desenvolvimento
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+## 🧪 Testes
+
+```bash
+# Executar testes
+npm run test
+
+# Executar testes com cobertura
+npm run test:coverage
+
+# Interface de testes
+npm run test:ui
+```
+
+## 🏗️ Build
+
+```bash
+npm run build
+```
+
+## 🚀 Deploy na Vercel
+
+### Opção 1: Deploy via CLI da Vercel
+
+1. Instale a CLI da Vercel:
+```bash
+npm i -g vercel
+```
+
+2. Faça login na Vercel:
+```bash
+vercel login
+```
+
+3. Deploy do projeto:
+```bash
+vercel
+```
+
+### Opção 2: Deploy via GitHub
+
+1. Faça push do código para um repositório GitHub
+2. Acesse [vercel.com](https://vercel.com)
+3. Conecte sua conta GitHub
+4. Importe o repositório
+5. A Vercel detectará automaticamente as configurações do Vite
+
+### Opção 3: Deploy via Dashboard
+
+1. Acesse [vercel.com](https://vercel.com)
+2. Clique em "New Project"
+3. Conecte seu repositório GitHub
+4. Configure as seguintes opções:
+   - **Framework Preset**: Vite
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+   - **Install Command**: `npm install`
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/
+│   ├── AcceleratorFeature/     # Componentes principais da feature
+│   └── shared/                 # Componentes reutilizáveis
+├── hooks/                      # Custom hooks
+├── test/                       # Configuração de testes
+└── assets/                     # Assets estáticos
+```
+
+## 🎯 Funcionalidades
+
+- **Tela de Boas-vindas**: Apresenta o acelerador de pontos
+- **Simulador**: Calculadora de pontos com entrada de gastos mensais
+- **Conversão**: Tela final para ativação do acelerador
+- **Navegação**: Fluxo intuitivo entre as telas
+- **Animações**: Lottie e Framer Motion para experiência moderna
+- **Responsivo**: Design adaptável para diferentes dispositivos
+
+## 🧪 Cobertura de Testes
+
+O projeto possui testes unitários com cobertura mínima de 80%:
+
+- ✅ Hooks customizados
+- ✅ Componentes compartilhados
+- ✅ Componentes da feature
+- ✅ Navegação entre telas
+- ✅ Interações do usuário
+
+## 🔧 Configurações
+
+- **Tailwind CSS**: Configurado para design system
+- **Vitest**: Configurado para testes com cobertura
+- **Vercel**: Configurado para deploy automático
+- **TypeScript**: Configuração estrita para melhor DX
+
+## 📱 Webview
+
+A aplicação foi desenvolvida especificamente para webview bancária, com:
+
+- Design otimizado para mobile
+- Navegação por gestos
+- Performance otimizada
+- Integração com APIs bancárias (mockadas)

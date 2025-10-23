@@ -1,4 +1,3 @@
-import React from 'react';
 import { AcceleratorFeature } from './components/AcceleratorFeature/AcceleratorFeature';
 import './App.css';
 
